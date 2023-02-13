@@ -17,21 +17,21 @@ def play_game():
         found = False
         for i in range(len(word)):
             if input_word[i] == word[i]:
-                print("\033[1;32m" + input_word[i], end="")
+                print("\033[1;32m" + input_word[i], end="") #prints bold green character if it is in the correct position in the input
                 found = True
             elif input_word[i] != word[i] and input_word[i] in word:
-                print("\033[1;33m" + input_word[i], end="")
+                print("\033[1;33m" + input_word[i], end="") #prints bold yellow character if it is in the word, but not in the correct position
                 found = True
             else:
-                print("\033[1;31m" + input_word[i], end="")
-        print('\033[0m\n')
+                print("\033[1;31m" + input_word[i], end="") #prints bold red character if it is not in the word
+        print('\033[0m\n')  #resets the color of the prompt to the default white
         tries += 1
         if tries >= 5:
             print("You lose the game. The word was", word + '\n')
             return False
 
 while True:
-    print("Welcome to the Wordle game!")
+    print("Welcome to Wordle!")
     if play_game():
         new_game = ""
         while new_game.lower() not in ["yes", "no"]:
@@ -44,4 +44,4 @@ while True:
             new_game = input("\033[0mDo you want to play again? (yes/no) ")
         if new_game.lower() != "yes":
             break
-print("\033[0mThank you for playing the Wordle game. Goodbye!")
+print("\033[0mThank you for playing Wordle. Goodbye!")
