@@ -27,7 +27,7 @@ def play_game():
         print('\033[0m\n')  #resets the color of the prompt to the default white
         tries += 1
         if tries >= 5:
-            print("You lose the game. The word was", word + '\n')
+            print("You lose. The word was " + word + '\n')
             return False
 
 while True:
@@ -44,4 +44,4 @@ while True:
             new_game = input("\033[0mDo you want to play again? (yes/no) ")
         if new_game.lower() != "yes":
             break
-print("\033[0mThank you for playing Wordle. Goodbye!")
+print("\033[0mThank you for playing Wordle!")
