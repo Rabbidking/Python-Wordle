@@ -1,7 +1,7 @@
 import random
 
 def play_game():
-    words = ['apple', 'table', 'chair', 'horse', 'house', 'bunny', 'happy', 'swift', 'lucas', 'storm']
+    words = ['apple', 'table', 'chair', 'horse', 'house', 'bunny', 'happy', 'swift', 'pizza', 'storm']
     word = random.choice(words)
     tries = 0
 
